@@ -1,0 +1,48 @@
+[
+  {
+    "description": "Standard Fiction test case",
+    "input": {
+      "title": "A Light in the Attic",
+      "price_gbp": 51.77,
+      "availability": "In stock",
+      "rating": 3,
+      "description": "It was dark and typical...",
+      "source_page": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
+    },
+    "expected": {
+      "category": "Fiction",
+      "min_confidence": 0.8
+    }
+  },
+  {
+    "description": "Academic / Programming book test case",
+    "input": {
+      "title": "Python Crash Course",
+      "price_gbp": 25.0,
+      "availability": "In stock",
+      "rating": 5,
+      "description": "A hands-on, project-based programming introduction.",
+      "source_page": "https://books.toscrape.com/catalogue/python-crash-course_1001/index.html"
+    },
+    "expected": {
+      "category": "Academic",
+      "min_confidence": 0.9
+    }
+  },
+  {
+    "description": "Ambiguous edge case triggering low confidence",
+    "input": {
+      "title": "Miscellaneous Object 42",
+      "price_gbp": 12.5,
+      "availability": "Limited",
+      "rating": 1,
+      "description": "Thing does stuff.",
+      "source_page": "https://books.toscrape.com/catalogue/misc-42_1002/index.html"
+    },
+    "expected": {
+      "category": "Other",
+      "max_confidence": 0.5,
+      "required_flag": "low_confidence_classification"
+    }
+  }
+]

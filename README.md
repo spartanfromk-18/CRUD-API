@@ -1,4 +1,4 @@
-cat << 'EOF' > README.md
+ 
 # 🚀 Enterprise Task & LLM Enrichment API
 
 > A production-grade, modular FastAPI backend integrating Supabase Authentication with a robust, self-healing LLM book enrichment pipeline, complete with strict Pydantic validation, prompt-as-code versioning, automated quarantine logging, and regression evaluation suites.
